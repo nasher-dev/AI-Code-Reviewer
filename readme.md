@@ -26,13 +26,6 @@ AI Code Reviewer is a full-stack web application that integrates Google Gemini A
 
 ---
 
-## 📦 Project Structure
-
-You're looking to represent your project's file structure in a GitHub README using a visually appealing and easy-to-understand format, similar to the image you provided. This is typically done using ASCII art for the directory tree and then explaining each file or directory.
-
-Here's how you can structure that section in your `README.md`:
-
----
 
 ## 📂 Project Structure
 
@@ -64,5 +57,65 @@ code-review/
 ```
 
 ---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally on your machine.
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/joshi-jyoti/AI-Code-Reviewer
+cd code-review
+```
+
+### 2️⃣ Setup the Backend
+
+```bash
+cd backend
+npm install
+# Add your Google Gemini API key to .env as:
+# GOOGLE_GEMINI_KEY=your_google_gemini_api_key
+npx nodemon
+```
+### 3️⃣ Setup the Frontend
+
+```bash
+cd ../Frontend
+npm install
+npm run dev
+```
+---
+
+## ⚙️ Usage
+
+Get started with the AI Code Reviewer in a few simple steps:
+
+1.  **✏️ Write or paste code** in the left editor panel.
+2.  **🚀 Click "Review"** to send your code to the AI reviewer.
+3.  **📋 The right panel** will then display a detailed, markdown-formatted review, including:
+    * Strengths of your code
+    * Identified issues
+    * Suggested fixes
+    * General suggestions for improvement
+
+---
+
+## 🌟 Features
+
+Our AI Code Reviewer comes packed with powerful features to enhance your coding workflow:
+
+* **🤖 Real-time code review** using Google Gemini AI, providing immediate insights.
+* **🌈 Syntax-highlighted code editing and review**, making your code easy to read and understand.
+* **💻 Professional, readable UI** designed for an intuitive and pleasant user experience.
+* **✅ Actionable, structured feedback** that helps you understand and implement improvements efficiently.
+
+---
+
+
+
+
 
 
