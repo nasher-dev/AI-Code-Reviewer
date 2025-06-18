@@ -28,5 +28,41 @@ AI Code Reviewer is a full-stack web application that integrates Google Gemini A
 
 ## 📦 Project Structure
 
+You're looking to represent your project's file structure in a GitHub README using a visually appealing and easy-to-understand format, similar to the image you provided. This is typically done using ASCII art for the directory tree and then explaining each file or directory.
+
+Here's how you can structure that section in your `README.md`:
+
+---
+
+## 📂 Project Structure
+
+This project follows a standard full-stack application structure, clearly separating frontend and backend concerns.
+
+```
+code-review/
+├── backend/                                  # Backend server built with Node.js and Express
+│   ├── .env                                  # Environment variables (e.g., API keys, port)
+│   ├── package.json                          # Backend dependencies and scripts
+│   ├── server.js                             # Entry point for the Node.js backend server
+│   └── src/                                  # Source code for the backend application
+│       ├── app.js                            # Express application setup and middleware
+│       ├── controllers/                      # Handles request logic for AI interactions
+│       │   └── ai.controller.js              # Controller for AI code review requests
+│       ├── routes/                           # Defines API endpoints
+│       │   └── ai.routes.js                  # Routes specifically for AI services
+│       └── services/                         # Contains business logic and external API calls
+│           └── ai.service.js                 # Service for interacting with Google Gemini AI
+└── Frontend/                                 # Frontend application built with React and Vite
+    ├── package.json                          # Frontend dependencies and scripts
+    ├── vite.config.js                        # Vite configuration for the React app
+    ├── index.html                            # Main HTML file for the frontend
+    └── src/                                  # Source code for the React application
+        ├── App.jsx                           # Main React component
+        ├── App.css                           # Styles for the App component
+        ├── main.jsx                          # Entry point for the React application
+        └── index.css                         # Global styles for the frontend
+```
+
+---
 
 
