@@ -1,6 +1,6 @@
 # 🤖 AI Code Reviewer
 
-AI Code Reviewer is a full-stack web application that integrates Google Gemini AI to intelligently analyze and review code in real time. It empowers developers by offering instant, AI-driven feedback on code quality, potential bugs, optimization opportunities, and best practices — all in a beautifully designed interface. Built with modern web technologies, the platform provides a seamless editing and reviewing experience for developers seeking rapid, actionable insights into their code.
+AI Code Reviewer is a full-stack web application that integrates Google Gemini AI to intelligently analyze and review code in real time. It empowers developers by offering instant, AI-driven feedback on code quality, potential bugs, optimization opportunities, and best practices — all in a beautifully designed interface. Built with modern web technologies, the platform provides a seamless editing and reviewing experience for developers seeking rapid, actionable insights into their code.🚀
 
 ---
 
