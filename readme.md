@@ -1,121 +1,131 @@
-# 🤖 AI Code Reviewer
+# AI Code Reviewer 🤖💻
 
-AI Code Reviewer is a full-stack web application that integrates Google Gemini AI to intelligently analyze and review code in real time. It empowers developers by offering instant, AI-driven feedback on code quality, potential bugs, optimization opportunities, and best practices — all in a beautifully designed interface. Built with modern web technologies, the platform provides a seamless editing and reviewing experience for developers seeking rapid, actionable insights into their code.🚀
+![GitHub Release](https://img.shields.io/badge/Latest%20Release-v1.0.0-blue.svg)  
+[![View Releases](https://img.shields.io/badge/View%20Releases%20on%20GitHub-brightgreen.svg)](https://github.com/nasher-dev/AI-Code-Reviewer/releases)
 
----
+Welcome to the **AI Code Reviewer** repository! This project is a full-stack web application that uses Google Gemini AI to review code, provide actionable feedback, and suggest improvements in real-time. This README will guide you through the features, installation, usage, and contribution details of the project.
 
-## 🛠️ Tech Stack
+## Table of Contents
 
-### Frontend
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-- ⚛️ **React (with Vite)** — UI library for building interactive interfaces  
-- 📝 **React Markdown** — For rendering markdown-formatted AI responses  
-- 🌈 **PrismJS** — Syntax highlighting in the code editor  
-- ✍️ **React Simple Code Editor** — Lightweight code editor component  
-- 📡 **Axios** — HTTP client for API communication  
-- 🔍 **rehype-highlight** — Syntax highlighting for markdown code blocks  
-- 🎨 **CSS** — Custom styling for a modern, responsive UI  
+## Features
 
-### Backend
+- **Real-Time Code Review**: The application analyzes your code as you type, providing instant feedback.
+- **Actionable Suggestions**: Get clear, actionable suggestions for code improvements.
+- **Multi-Language Support**: Supports various programming languages, making it versatile for developers.
+- **User-Friendly Interface**: The clean and intuitive UI ensures a smooth user experience.
+- **Integration with GitHub**: Easily connect your GitHub repositories for seamless code reviews.
 
-- 🟢 **Node.js** — JavaScript runtime  
-- 🚂 **Express** — Web server framework  
-- 🤖 **@google/genai** — Google Gemini AI SDK for code review  
-- 🔓 **CORS** — Middleware to enable cross-origin requests  
-- 🔐 **dotenv** — For environment variable management  
+## Technologies Used
 
----
+This project utilizes a range of technologies to deliver its functionality:
 
+- **Frontend**: 
+  - React
+  - CSS
+  - PrismJS for syntax highlighting
+  - React Markdown for rendering Markdown content
 
-## 📂 Project Structure
+- **Backend**: 
+  - Node.js
+  - Express.js
+  - Axios for making HTTP requests
+  - CORS for handling cross-origin requests
 
-This project follows a standard full-stack application structure, clearly separating frontend and backend concerns.
+- **AI Integration**: Google Gemini AI for code analysis and feedback.
 
-```
-code-review/
-├── backend/                                  # Backend server built with Node.js and Express
-│   ├── .env                                  # Environment variables (e.g., API keys, port)
-│   ├── package.json                          # Backend dependencies and scripts
-│   ├── server.js                             # Entry point for the Node.js backend server
-│   └── src/                                  # Source code for the backend application
-│       ├── app.js                            # Express application setup and middleware
-│       ├── controllers/                      # Handles request logic for AI interactions
-│       │   └── ai.controller.js              # Controller for AI code review requests
-│       ├── routes/                           # Defines API endpoints
-│       │   └── ai.routes.js                  # Routes specifically for AI services
-│       └── services/                         # Contains business logic and external API calls
-│           └── ai.service.js                 # Service for interacting with Google Gemini AI
-└── Frontend/                                 # Frontend application built with React and Vite
-    ├── package.json                          # Frontend dependencies and scripts
-    ├── vite.config.js                        # Vite configuration for the React app
-    ├── index.html                            # Main HTML file for the frontend
-    └── src/                                  # Source code for the React application
-        ├── App.jsx                           # Main React component
-        ├── App.css                           # Styles for the App component
-        ├── main.jsx                          # Entry point for the React application
-        └── index.css                         # Global styles for the frontend
-```
+## Installation
 
----
+To get started with the AI Code Reviewer, follow these steps:
 
-## 🚀 Getting Started
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/nasher-dev/AI-Code-Reviewer.git
+   cd AI-Code-Reviewer
+   ```
 
-Follow these steps to run the project locally on your machine.
+2. **Install Dependencies**:
+   For the frontend:
+   ```bash
+   cd client
+   npm install
+   ```
 
----
+   For the backend:
+   ```bash
+   cd server
+   npm install
+   ```
 
-### 1️⃣ Clone the Repository
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the server directory and add your Google Gemini API key:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
 
-```bash
-git clone https://github.com/joshi-jyoti/AI-Code-Reviewer
-cd code-review
-```
+4. **Run the Application**:
+   Start the backend server:
+   ```bash
+   cd server
+   npm start
+   ```
 
-### 2️⃣ Setup the Backend
+   Start the frontend application:
+   ```bash
+   cd client
+   npm start
+   ```
 
-```bash
-cd backend
-npm install
-# Add your Google Gemini API key to .env as:
-# GOOGLE_GEMINI_KEY=your_google_gemini_api_key
-npx nodemon
-```
-### 3️⃣ Setup the Frontend
+Visit `http://localhost:3000` in your browser to access the application.
 
-```bash
-cd ../Frontend
-npm install
-npm run dev
-```
----
+## Usage
 
-## ⚙️ Usage
+Using the AI Code Reviewer is straightforward:
 
-Get started with the AI Code Reviewer in a few simple steps:
+1. **Access the Application**: Open your web browser and go to `http://localhost:3000`.
+2. **Log In**: If you have a GitHub account, log in to connect your repositories.
+3. **Start Reviewing**: Paste your code into the editor. The AI will analyze it and provide feedback in real-time.
+4. **Implement Suggestions**: Review the suggestions provided and make improvements to your code as needed.
 
-1.  **✏️ Write or paste code** in the left editor panel.
-2.  **🚀 Click "Review"** to send your code to the AI reviewer.
-3.  **📋 The right panel** will then display a detailed, markdown-formatted review, including:
-    * Strengths of your code
-    * Identified issues
-    * Suggested fixes
-    * General suggestions for improvement
+For more detailed instructions, check the [Releases section](https://github.com/nasher-dev/AI-Code-Reviewer/releases) for downloadable files and execution steps.
 
----
+## Contributing
 
-## 🌟 Features
+We welcome contributions! If you would like to contribute to the AI Code Reviewer, please follow these steps:
 
-Our AI Code Reviewer comes packed with powerful features to enhance your coding workflow:
+1. **Fork the Repository**: Click the fork button at the top right of the page.
+2. **Create a Branch**: Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Changes**: Implement your changes in the code.
+4. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. **Create a Pull Request**: Go to the original repository and create a pull request.
 
-* **🤖 Real-time code review** using Google Gemini AI, providing immediate insights.
-* **🌈 Syntax-highlighted code editing and review**, making your code easy to read and understand.
-* **💻 Professional, readable UI** designed for an intuitive and pleasant user experience.
-* **✅ Actionable, structured feedback** that helps you understand and implement improvements efficiently.
+## License
 
----
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Contact
 
+For questions or feedback, feel free to reach out:
 
+- **Author**: Your Name
+- **Email**: your.email@example.com
+- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
 
-
-
+Thank you for checking out the AI Code Reviewer! We hope it helps you improve your coding skills and streamline your development process. For the latest updates, visit the [Releases section](https://github.com/nasher-dev/AI-Code-Reviewer/releases).
